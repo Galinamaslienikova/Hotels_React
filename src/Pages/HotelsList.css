@@ -1,0 +1,137 @@
+body{
+    background: linear-gradient(to bottom right, #D9AD61, #705D45);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+a{
+   text-decoration: none;
+}
+button,input:hover{
+    cursor: pointer;
+    
+}
+.imageModal{
+    position: absolute;
+    left:10%;
+    width: 80%;
+    max-height: 80vh;
+    z-index: 10;
+
+    
+}
+.starsHover:hover{
+    cursor: pointer;
+  }
+.orangeButton{
+    border-radius: 5px;
+    background-color: burlywood;
+    width: 50px;
+    height: 50px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width:1024px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom right, #F2F0EC, #B7AC9F);
+    border-radius: 5px;
+}
+
+.hotelName{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    height:200px;
+}
+img{
+    max-width: 100%;
+    overflow: hidden;
+}
+.hotelImage{
+    max-width: 25%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    
+}
+.hotelImage+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 15px;
+    width: 75%;
+}
+.hotelImage>img:hover{
+cursor: pointer;
+}
+.hotelList{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 5px;
+    border:1px solid black;
+    
+}
+.borderHot>div{
+    border-top:1px solid black;
+    
+}
+
+.hotelHeader{
+    padding-left: 10px;
+  
+}
+.hotelHeader>h1{
+    margin-top: 0;
+}
+
+.roomInList{
+    display: flex;
+    flex-direction: row;
+    
+}
+.roomInList>div{
+    padding: 5px 5px 5px 5px;
+}
+.roomInList>div:first-of-type{
+    width: 25%;
+}
+.description{
+    width: 75%;
+    line-height: 25px;
+    
+}
+.roomInList>div>h3{
+    margin-top: 0;
+}
+.roomInList>div>p{
+    margin: 0 0 10px 0;
+}
+.show{
+    display: flex;
+    flex-direction: column;
+}
+.show>p>span{
+   font-weight: bold;
+}
+.show>p{
+    margin-bottom: 0;
+    padding-left: 5px;
+}
+.notShow{
+    display: none;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  margin-bottom: 25px;
+  margin-top: 50px;
+    
+}
+.search>p{
+    margin: 0;
+}
+.imageInRoom{
+    width:30%;
+}
