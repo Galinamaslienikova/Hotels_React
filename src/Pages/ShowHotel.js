@@ -69,7 +69,7 @@ export function ShowHotel(){
             id={hotels[0].id}/>:<div></div>
     return(
         <div className='container'>
-            <Link to='/'><button className='orangeButton'> Back</button></Link>
+            <Link to='/'><span className='orangeButton'>Back</span></Link>
             <Search  children={children} adults={adults} plusMinus={plusMinus} stars={stars}/>
             {result}
         </div>

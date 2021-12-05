@@ -20,9 +20,10 @@ export default function ImageSlider({imgArr,onclick,num}){
    
     return(
         <>
-        <button disabled={imgArr.length>1?false:true} onClick={prev}>Prev</button>
+        <button  className="arrow left" disabled={imgArr.length>1?false:true} onClick={prev}/> 
+        <button className="arrow right" disabled={imgArr.length>1?false:true}  onClick={next}/>
         <img data-num={num} onClick={onclick}  alt='img' src={imgArr[i].url}/>
-        <button disabled={imgArr.length>1?false:true}  onClick={next}>Next</button>
+       
         </>
     )
 }

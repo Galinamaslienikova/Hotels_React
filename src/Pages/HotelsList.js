@@ -1,8 +1,9 @@
 import React from "react";
 import { getHotelsList } from "../Components/api";
+import { Header } from "../Components/Header";
 import OneHotelinList from "../Components/OneHotelinList";
 import { Search } from "../Components/Search";
-import  './HotelsList.css'
+import  '../Styles/HotelsList.css'
 export class HotelsList extends React.Component{
     constructor(props){
         super(props)
@@ -14,12 +15,13 @@ export class HotelsList extends React.Component{
 
         }
     }
-    componentDidMount(){
+    componentDidMount(){ 
         getHotelsList()
         .then(data=>{
             this.setState({list:data})
         })
     }
+    
     plusMinus=(e)=>{
         if(e.target.value==='+'){
             this.setState({
@@ -44,9 +46,12 @@ export class HotelsList extends React.Component{
             
         })
         return(
-            <div className='container'>
-              <Search cheking={this.state.stars} change={this.starsCheked}  main={true} children={this.state.children} adults={this.state.adults} plusMinus={this.plusMinus} />
-                {result}
+            <div>
+                <Header/>
+                <div className='container'>
+                <Search cheking={this.state.stars} change={this.starsCheked}  main={true} children={this.state.children} adults={this.state.adults} plusMinus={this.plusMinus} />
+                    {result}
+                </div>
             </div>
         )
     }

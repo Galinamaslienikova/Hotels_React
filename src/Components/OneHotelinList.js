@@ -13,13 +13,16 @@ export default function OneHotelinList({adults,children,cols,email,telephone,cou
     },[adults,children,stars])
 
    let showModal=function (){
-       setModal(true)
+       if(window.innerWidth>768){
+        setModal(true)
+       }
+      
    }
    let closeModal=function(){
        setModal(false)
    }
     return(
-        <div style={{position:"relative"}}>
+        <div className='hotels'>
             <Modal close={closeModal} modal={modal}>
                 <ImageSlider imgArr={images} />
              </Modal>   
