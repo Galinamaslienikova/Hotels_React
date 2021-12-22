@@ -1,16 +1,16 @@
 
 import '../Styles/Stars.css'
 export function Stars({cheking,change}){
-
+    let starsIn=function(){
+        let arr=[]
+        for(let i=0;i<5;i++){
+            arr.push( <div onClick={()=>change(i+1)} className={cheking>i?'cheked clip-star':'nocheked clip-star'}></div>)
+        }
+        return arr
+    }
     return(
         <div className="starsHotel">
-            <div data-numb={1} onClick={change} className={cheking>0?'cheked clip-star':'nocheked clip-star'}></div>
-            <div data-numb={2} onClick={change} className={cheking>1?'cheked clip-star':'nocheked clip-star'}></div>
-            <div data-numb={3} onClick={change} className={cheking>2?'cheked clip-star':'nocheked clip-star'}></div>
-            <div data-numb={4} onClick={change} className={cheking>3?'cheked clip-star':'nocheked clip-star'}></div>
-            <div data-numb={5} onClick={change} className={cheking>4?'cheked clip-star':'nocheked clip-star'}></div>
+            {starsIn()}
         </div>
-        
-        
     )  
 }
